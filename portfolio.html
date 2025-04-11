@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #1F252E;
+        zoom: 1.5;
+        background-image: url('MainBG.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: repeat; 
+
+    }
+
+    header {
+        padding: 1.7rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    nav {
+margin-left: 60%; 
+display: flex;
+gap: 1rem;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: .97rem;
+font-weight: 600;
+padding: 0.4rem 1rem;
+}
+
+nav a.active,
+nav a:hover {
+color: #c100fc;
+border-radius: 1rem;
+transition: all 0.3s ease-in-out;
+}
+
+
+    section {
+        margin: 2rem 8.5rem;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8rem auto;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .main p {
+        margin-top: 1rem;
+        font-size: .98rem;
+        color: #fff;
+    }
+
+
+    @media only screen and (max-width: 480px) {
+        header {
+            padding: 0.7rem 1rem;
+        }
+
+        section {
+            margin: 1rem 1.5rem;
+        }
+    }
+    .p{
+        color: white;
+    }
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.center-image {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+}
+
+
+
+footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: auto;
+      z-index: 2;
+      position: relative;
+    }
+    h1, h2{
+        color: white;
+        text-align: center;
+    }
+    
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 24px;
+  background-color: #892eff;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: none;
+}
+
+body:has(:target) .scroll-top-btn,
+html:has(:target) .scroll-top-btn {
+  display: block;
+}
+
+
+.scroll-top-btn {
+  display: block; 
+}
+
+.scroll-top-btn:hover {
+  background-color: #892eff;
+}
+
+
+</style>
+</head>
+<body class="fade-in">
+  <header>
+    <nav id="top">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+   <h1>My Sample works</h1>
+
+  <div class="image-holder">
+    <h2>Coding</h2>
+  <img src="code.jpg" alt="programming" style="display: block; margin: 20px auto; width: 400px; height: auto;">
+  <br>
+  <h2>Video Edits</h2>
+  <img src="edit.jpeg" alt="programming" style="display: block; margin: 20px auto; width: 700px; height: auto;">
+  <br>
+  <h2>Circuit Activity</h2>
+  <img src="board.jpg" alt="programming" style="display: block; margin: 20px auto; width: 700px; height: auto;">
+  <br>
+  
+</div>
+
+
+<a href="#top" class="scroll-top-btn">↑</a>
+
+</body>
+<footer>
+    &copy; 2025 Paulo. All rights reserved.
+</footer>
+</html>

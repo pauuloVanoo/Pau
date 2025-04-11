@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&amp;family=Montserrat:wght@300;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #1F252E;
+        zoom: 1.5;
+        background-image: url('MainBG.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: repeat; 
+
+    }
+
+    header {
+        padding: 1.7rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav {
+margin-left: 60%; 
+display: flex;
+gap: 1rem;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: .97rem;
+font-weight: 600;
+padding: 0.4rem 1rem;
+}
+
+nav a.active,
+nav a:hover {
+color: #00E8F8;
+border-radius: 1rem;
+transition: all 0.3s ease-in-out;
+}
+
+
+    section {
+        margin: 2rem 8.5rem;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8rem auto;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .main p {
+        margin-top: 1rem;
+        font-size: .98rem;
+        color: #fff;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        margin-top: 1.7rem;
+    }
+
+    .social a {
+        color: #00E8F8;
+        font-size: 1rem;
+        border: 1.6px solid #00E8F8;
+        border-radius: 50%;
+        padding: .35rem;
+        text-align: center;
+        width: 26px;
+    }
+
+    .social a:hover {
+        color: #1F252E;
+        background-color: #00E8F8;
+        box-shadow: 0 0 20px #00E8F8;
+        transition: all .3s ease-in-out;
+    }
+
+    .images {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+overflow: hidden;
+box-shadow: 0px 16px 4px -10px #00E8F8;
+position: absolute;
+top: 30%;
+right: 15%;
+}
+
+
+.images img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+    @media only screen and (max-width: 480px) {
+        header {
+            padding: 0.7rem 1rem;
+        }
+
+        section {
+            margin: 1rem 1.5rem;
+        }
+    }
+    .p{
+        color: white;
+    }
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    h1:hover {
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                   0 0 30px rgba(255, 255, 255, 0.6);
+      transition: text-shadow 0.3s ease, filter 0.3s ease;
+      filter: brightness(1.2);
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 2.2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      transition: text-shadow 0.3s, transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .contact-info a:hover,
+    .contact-info a:focus {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .contact-info i {
+      font-size: 1.4rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px 15px;
+      font-family: inherit;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: white(255, 255, 255, 0.1);
+      color: black;
+      backdrop-filter: blur(6px);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #ccc;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid black;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: auto;
+      z-index: 2;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  
+</style>
+</head>
+<body class="fade-in">
+  <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>CONTACT</h1>
+
+    <div class="contact-info" aria-label="Contact details">
+      <a href="kevano5693qc@student.fatima.edu.ph">
+        <i class="fas fa-envelope"></i> kevano5693qc@student.fatima.edu.ph
+      </a>
+      <a href="https://www.facebook.com/RykPauloo02" target="_blank">
+        <i class="fab fa-facebook"></i> Paulo Vano
+      </a>
+      <a href="https://www.instagram.com/altpauui//" target="_blank">
+        <i class="fab fa-instagram"></i> @altpauui
+      </a>
+      <a href="tel:+639701499079">
+        <i class="fas fa-phone"></i> +63 994 595 1332
+      </a>
+    </div>
+
+    <form aria-label="Contact form">
+      <input type="text" placeholder="Your Name" aria-label="Your Name" required="">
+      <input type="email" placeholder="Your Email" aria-label="Your Email" required="">
+      <textarea rows="5" placeholder="Your Message" aria-label="Your Message" required=""></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+ 
+</body>
+
+<footer>
+    &copy; 2025 Paulo. All rights reserved.
+</footer>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #1F252E;
+        zoom: 1.5;
+        background-image: url('MainBG.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: repeat;
+    }
+
+    header {
+        padding: 1.7rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav {
+margin-left: 60%; 
+display: flex;
+gap: 1rem;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: .97rem;
+font-weight: 600;
+padding: 0.4rem 1rem;
+}
+
+nav a.active,
+nav a:hover {
+color: #c100fc;
+border-radius: 1rem;
+transition: all 0.3s ease-in-out;
+}
+
+
+    section {
+        margin: 2rem 8.5rem;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8rem auto;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .main p {
+        margin-top: 1rem;
+        font-size: .98rem;
+        color: #fff;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        margin-top: 1.7rem;
+    }
+
+    .social a {
+        color: #c100fc;
+        font-size: 1rem;
+        border: 1.6px solid #c100fc;
+        border-radius: 50%;
+        padding: .35rem;
+        text-align: center;
+        width: 26px;
+    }
+
+    .social a:hover {
+        color: #1F252E;
+        background-color: #c100fc;
+        box-shadow: 0 0 20px #c100fc;
+        transition: all .3s ease-in-out;
+    }
+
+    .images {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+overflow: hidden;
+box-shadow: 0px 16px 4px -10px #c100fc;
+position: absolute;
+top: 30%;
+right: 15%;
+}
+
+
+.images img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+    @media only screen and (max-width: 480px) {
+        header {
+            padding: 0.7rem 1rem;
+        }
+
+        section {
+            margin: 1rem 1.5rem;
+        }
+    }
+    .p{
+        color: white;
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .skill {
+      border: 2px solid white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 300;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .skill:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .skill-content {
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      opacity: 0;
+      transition: all 0.4s ease;
+      pointer-events: none;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .skill:hover .skill-content {
+      opacity: 1;
+      transform: translateX(-75%) scale(1);
+    }
+
+    .skill-content img {
+      width: 280px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .skill-content.tooltip {
+      background-color: white(255, 255, 255, 0);
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      width: 220px;
+      box-shadow: 0 6px 20px white(0, 0, 0, 0.479);
+    }
+    body, h1, p {
+  color: white;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.section-heading, .section-title, p{
+  text-align: center;
+}
+footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: auto;
+      z-index: 2;
+      position: relative;
+    }
+  
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 24px;
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px white(0,0,0,0.3);
+  display: none;
+}
+
+body:has(:target) .scroll-top-btn,
+html:has(:target) .scroll-top-btn {
+  display: block;
+}
+
+
+.scroll-top-btn {
+  display: block; 
+}
+
+.scroll-top-btn:hover {
+  background-color: #bb1ff8;
+}
+
+
+</style>
+</head>
+<body class="fade-in">
+  
+
+  <header id="top">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  
+  <br> 
+  <section id="about" class="about">
+    <div class="about-content">
+        <h2 class="section-title">About Me</h2> <br> <br> <br>
+
+        
+        <p>Hello! I'm a 20-year-old first-year IT student at Our Lady of Fatima University, who is deeply passionate about how technologies work, the ever-evolving digital world.</p>
+        <br>
+        <p>As I navigate my college adventures, I always wanted to expand my knowledge in programming, and artificial intelligence, constantly  pushing challenging myself with new projects and problem-solving opportunities.</p>
+        <br>
+        <p>Beyond my academics, I am always on the lookout for hands-on experiences, whether through , internships, or networking with like-minded individuals. My goal is not only to master technical skills but to help myself become one of the best.</p>
+        <br>
+        
+    </div>
+
+
+  <br> <br> <br> <br> <br> <br> <br>
+  <div class="skills">
+    <div class="skill">
+      Watching anime
+      <span class="skill-content">
+        <img src="anya.jpg" alt="anya">
+      </span>
+    </div>
+    <div class="skill">
+      Online Games
+      <span class="skill-content">
+        <img src="bano.jpg" alt="Online Games">
+      </span>
+    </div>
+    <div class="skill">
+      Basketball
+      <span class="skill-content">
+        <img src="ball.jpg" alt="Ball">
+      </span>
+    </div>
+    <div class="skill">
+      Reading manga
+      <span class="skill-content">
+        <img src="ace.jpg" alt="ace">
+      </span>
+    </div>
+  </div>
+
+  <br> <br> <br> <br>
+
+  <h1 class="section-heading">My Skills</h1> <br>
+    <p>
+      "I'm gonna be the King of the Pirates!" and "If you don't take risks, you can't create a future!" – Luffy
+    </p>
+    <br> <br>
+    <div class="skills">
+      <div class="skill">
+        Circuitboard tester
+        <span class="skill-content tooltip">
+          <p>I specialize in testing circuits, ensuring efficiency, reliability, safety,  and optimal outputs in electronic systems."</p>
+        </span>
+      </div>
+      <div class="skill">
+        Web Developer
+        <span class="skill-content tooltip">
+         <p>I build dynamic websites, combining my skills with functionality to deliver seamless user experiences.</p>
+        </span>
+      </div>
+      <div class="skill">
+        Programmer
+        <span class="skill-content tooltip">
+         <p>I program a clean, efficient code to create software solutions that can solve real-world problems.</p>
+        </span>
+      </div>
+      <div class="skill">
+        Video editings
+        <span class="skill-content tooltip">
+         <p>I create a  high-quality videos by expertly editing clips, applying effects, and refining transitions to tell extraordinary visual effects.</p>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#top" class="scroll-top-btn">↑</a>
+
+</body>
+<footer>
+  &copy; 2025 Paulo. All rights reserved.
+</footer>
+</html>
